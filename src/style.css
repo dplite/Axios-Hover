@@ -3,23 +3,30 @@ p {
   font-family: Lato;
 }
 .c {
+  color:cyan;
   display: flex;
   justify-content: center;
   align-items: center;
   
 }
 .c1 {
-  
+  color:magenta;
 }
 .c2 {
-  
+  color:magenta;
 }
 .c3 {
-  
+  color:magenta;
 }
 .r2{
-  
+  color:chocolate;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.n1{
+  color:blueviolet;
+}
+.n2{
+  color:forestgreen;
 }

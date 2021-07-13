@@ -34,16 +34,17 @@ export default class Info extends React.Component{
     console.log(this.props.user)
     return(
       <>
-      <div>
+      <div className="n1">
       <div>
       {this.props.user.map((user,i)=>(
-            <div onMouseOver={()=>{
+            <div className="n3" onMouseOver={()=>{
               this.setState({expanded:!this.state.expanded})
               
             }}>
              {this.props.index==i && <div>
               UserName: {this.props.user[i].name}
               <br></br>
+              <div className="n2">
               {this.state.expanded && <div>Email:
                 {this.props.user[i].email}
                 <br></br>
@@ -52,7 +53,7 @@ export default class Info extends React.Component{
                 <br></br>
               Phone:
                 {this.props.user[i].phone}</div>}
-              
+              </div>
                 
                </div>}
                 
@@ -87,10 +88,13 @@ export default class Display extends React.Component{
           <button className="c1" onClick={()=>{
             {this.state.index>0 && this.setState({index:this.state.index-1})}
           }}>  Left  </button>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <Middle className="c2" index={this.state.index}/>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <button className="c3" onClick={()=>{
            {this.state.index<this.state.users.length-1 && this.setState({index:this.state.index+1})}
           }}>  Right  </button>
+          
 
 
           </div>
